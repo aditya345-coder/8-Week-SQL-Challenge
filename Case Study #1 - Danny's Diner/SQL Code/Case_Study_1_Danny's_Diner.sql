@@ -64,5 +64,13 @@ JOIN menu m ON s.product_id=m.product_id
 GROUP BY s.customer_id;
 
 -- 2. How many days has each customer visited the restaurant?
+SELECT 
+    customer_id,
+    COUNT(DISTINCT order_date) AS no_times_visited
+FROM sales 
+GROUP BY customer_id;
 
+-- DISTINCT is used here, because if a customer visited the restaurant multiple times on the same day and placed multiple orders, 
+-- each of those orders would be counted separately as a visit, leading to an inflated count.
+  
   
