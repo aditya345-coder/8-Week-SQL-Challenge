@@ -28,7 +28,7 @@ You can inspect the entity relationship diagram and example data below.
  ## Entity Relationship Diagram
  
  <p align="center">
-<img src="https://user-images.githubusercontent.com/92220550/230783623-a8b0f477-1830-47e7-94fc-0db2d4dbcf3f.PNG" alt="Image" width="350" height="350">
+<img src="https://user-images.githubusercontent.com/92220550/230783623-a8b0f477-1830-47e7-94fc-0db2d4dbcf3f.PNG" alt="Image" width="450" height="350">
  
  
 ## Case Study Questions
