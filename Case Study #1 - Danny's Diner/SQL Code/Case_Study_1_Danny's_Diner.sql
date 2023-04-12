@@ -74,3 +74,36 @@ GROUP BY customer_id;
 -- each of those orders would be counted separately as a visit, leading to an inflated count.
   
   
+-- 3. What was the first item from the menu purchased by each customer?
+SELECT customer_id, 
+	   product_name  
+FROM (SELECT s.customer_id, 
+             m.product_name, 
+			 ROW_NUMBER() OVER(PARTITION BY s.customer_id ORDER BY s.order_date) AS rnk
+FROM sales s
+JOIN menu m ON m.product_id = s.product_id) AS t
+WHERE t.rnk=1;
+
+
+-- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+SELECT m.product_name,COUNT(*) AS most_purchased
+FROM sales s
+JOIN menu m ON s.product_id=m.product_id
+GROUP BY m.product_name
+ORDER BY most_purchased DESC
+LIMIT 1;
+
+-- 5. Which item was the most popular for each customer?
+WITH cte AS (SELECT s.customer_id, 
+		    m.product_name, 
+                    COUNT(s.product_id) AS count,
+                    DENSE_RANK() OVER(PARTITION BY s.customer_id ORDER BY COUNT(s.product_id) DESC ) AS rnk
+FROM sales s
+JOIN menu m ON s.product_id=m.product_id
+GROUP BY s.customer_id, m.product_id)
+
+SELECT customer_id, 
+       product_name, 
+       count,rnk  
+FROM cte
+WHERE rnk=1;
