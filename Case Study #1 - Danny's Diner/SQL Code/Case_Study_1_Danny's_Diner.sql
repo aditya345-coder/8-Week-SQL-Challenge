@@ -107,3 +107,58 @@ SELECT customer_id,
        count,rnk  
 FROM cte
 WHERE rnk=1;
+
+-- 6. Which item was purchased first by the customer after they became a member?
+WITH cte AS(
+            SELECT s.customer_id,
+                   m.product_name, 
+                   mb.join_date, 
+                   s.order_date, 
+                   DENSE_RANK() OVER(PARTITION BY mb.customer_id ORDER BY s.order_date) AS rnk
+            FROM sales s
+            JOIN members mb ON mb.customer_id = s.customer_id
+            JOIN menu m ON s.product_id=m.product_id
+            WHERE s.order_date >= mb.join_date)
+
+SELECT customer_id,
+       product_name,
+       order_date
+FROM cte
+WHERE rnk=1;
+
+-- 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
+WITH cte AS(
+	SELECT s.customer_id, 
+	       m.product_name, 
+               s.order_date, 
+               CASE WHEN m.product_name='sushi' THEN ROUND(m.price*20,1) 
+	       ELSE ROUND(m.price*10,1) 
+               END AS points 
+	FROM sales s
+	JOIN menu m ON s.product_id=m.product_id
+)
+
+SELECT customer_id, SUM(points) AS total_points FROM cte
+GROUP BY customer_id;
+
+-- 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?  
+WITH cte AS(
+	SELECT s.customer_id, 
+	       m.product_name,
+               mb.join_date,
+               s.order_date, 
+               DATE_ADD(join_date, INTERVAL 6 DAY) AS first_week,
+               CASE 
+		   WHEN m.product_name = 'sushi' THEN ROUND(m.price*20,1) 
+		   WHEN s.order_date BETWEEN mb.join_date AND DATE_ADD(mb.join_date, INTERVAL 6 DAY) THEN ROUND(m.price*20,1) 
+                   ELSE ROUND(m.price*10,1) 
+	       END AS points 
+	FROM sales s
+	JOIN menu m ON s.product_id=m.product_id
+        JOIN members mb ON s.customer_id=mb.customer_id
+)
+
+SELECT customer_id, SUM(points) AS total_points FROM cte
+WHERE EXTRACT(MONTH FROM order_date) = 1
+GROUP BY customer_id
+ORDER BY customer_id;
