@@ -24,4 +24,6 @@ All datasets exist within the pizza_runner database schema - be sure to include 
 ## Entity Relationship Diagram
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/92220550/234103981-e5739f9f-3861-40b5-a112-f11a4fe622e5.png" alt="Image" width="450" height="350">
+<img src="https://user-images.githubusercontent.com/92220550/234104201-d93224d7-8f0b-498b-8604-1947ab78ae78.png" alt="Image" width="450" height="350">
+  
+  
