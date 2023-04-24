@@ -20,3 +20,6 @@ Because Danny had a few years of experience as a data scientist - he was very aw
 He has prepared for us an entity relationship diagram of his database design but requires further assistance to clean his data and apply some basic calculations so he can better direct his runners and optimise Pizza Runner’s operations.
 
 All datasets exist within the pizza_runner database schema - be sure to include this reference within your SQL scripts as you start exploring the data and answering the case study questions.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/92220550/234103541-e3c982fc-77c8-4f29-9e77-27736b8ed882.png" alt="Image" width="450" height="350">
