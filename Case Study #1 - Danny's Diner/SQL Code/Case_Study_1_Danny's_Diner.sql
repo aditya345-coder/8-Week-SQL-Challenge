@@ -126,6 +126,35 @@ SELECT customer_id,
 FROM cte
 WHERE rnk=1;
 
+-- 7. Which item was purchased just before the customer became a member? # ERROR
+WITH cte AS (
+	SELECT s.customer_id,
+	       m.product_name, 
+	       mb.join_date, 
+	       s.order_date, 
+	       DENSE_RANK() OVER(PARTITION BY mb.customer_id ORDER BY s.order_date) AS rnk
+	FROM sales s
+	JOIN members mb ON mb.customer_id = s.customer_id
+	JOIN menu m ON s.product_id=m.product_id
+	WHERE s.order_date < mb.join_date
+)
+
+SELECT customer_id,
+	   product_name
+FROM cte
+WHERE rnk=1;
+
+-- 8. What is the total items and amount spent for each member before they became a member?
+SELECT s.customer_id,
+	   COUNT(m.product_name) AS number_of_item, 
+       SUM(m.price) AS total_amount
+FROM sales s
+JOIN members mb ON mb.customer_id = s.customer_id
+JOIN menu m ON s.product_id=m.product_id
+WHERE s.order_date < mb.join_date
+GROUP BY s.customer_id
+ORDER BY s.customer_id;
+
 -- 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 WITH cte AS(
 	SELECT s.customer_id, 
