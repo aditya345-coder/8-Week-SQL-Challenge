@@ -191,3 +191,42 @@ SELECT customer_id, SUM(points) AS total_points FROM cte
 WHERE EXTRACT(MONTH FROM order_date) = 1
 GROUP BY customer_id
 ORDER BY customer_id;
+
+-- Bonus Questions
+
+-- Join All The Things
+SELECT s.customer_id,
+       s.order_date,
+       m.product_name,
+       m.price,
+	      CASE
+		  WHEN mb.join_date > s.order_date THEN 'N'
+		  WHEN mb.join_date <= s.order_date THEN 'Y'
+                  ELSE 'N'
+	      END AS members
+FROM sales s
+LEFT JOIN members mb ON mb.customer_id = s.customer_id
+LEFT JOIN menu m ON s.product_id=m.product_id;
+
+-- Rank All The Things
+WITH cte AS (
+SELECT s.customer_id,
+       s.order_date,
+       m.product_name,
+       m.price,
+	       CASE
+		   WHEN mb.join_date > s.order_date THEN 'N'
+		   WHEN mb.join_date <= s.order_date THEN 'Y'
+                   ELSE 'N'
+	       END AS members
+FROM sales s
+LEFT JOIN members mb ON mb.customer_id = s.customer_id
+LEFT JOIN menu m ON s.product_id=m.product_id)
+
+SELECT *,
+	 CASE 
+	      WHEN members = 'Y'
+	      THEN DENSE_RANK() OVER(PARTITION BY customer_id, members ORDER BY order_date) 
+	      ELSE null
+         END AS ranking 
+FROM cte;
