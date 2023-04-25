@@ -1,3 +1,39 @@
-# 8 Week SQL Challenge
+# Danny's Ma 8-Week SQL Challenge
 
-This repository is a collection of solutions to the case studies in 8 Week SQL Challenge
+This repository contains my code solutions for the challenges presented in Danny's Ma 8-Week SQL Challenge.
+
+## Table of Contents
+- Challenge Overview
+- Folder Structure
+- Getting Started
+- Resources
+
+
+## Challenge Overview
+The challenges cover a range of SQL topics and are designed to progressively increase in difficulty. Each challenge requires the use of SQL queries to solve a real-world problem.
+
+## Folder Structure
+[Case Study #1](https://github.com/aditya345-coder/8-Week-SQL-Challenge_/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner) - Danny's Diner: Contains my code solutions for Week 1 challenge
+[Case Study #2](https://github.com/aditya345-coder/8-Week-SQL-Challenge_/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner) - Pizza Runner: Contains my code solutions for Week 2 challenge
+week_3: Contains my code solutions for Week 3 challenge
+week_4: Contains my code solutions for Week 4 challenge
+week_5: Contains my code solutions for Week 5 challenge
+week_6: Contains my code solutions for Week 6 challenge
+week_7: Contains my code solutions for Week 7 challenge
+week_8: Contains my code solutions for Week 8 challenge
+Each week's folder contains a README.md file with a brief summary of the challenge and my approach to solving it.
+
+## Getting Started
+To get started, make sure that you have signed up for the challenge on Danny's website. Download the challenge files for each week and save them in their corresponding folders.
+
+Use the SQL editor of your choice to write your code solutions. I used MySQL for this challenge.
+
+## Resources
+Here are some resources that may be helpful as you work through the challenges:
+
+SQL Zoo (https://sqlzoo.net/)
+W3Schools SQL Tutorial (https://www.w3schools.com/sql/)
+SQLBolt (https://sqlbolt.com/)
+
+## Support
+Give a ⭐️ if you like this project!
