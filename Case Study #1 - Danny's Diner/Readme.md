@@ -1,4 +1,4 @@
-# [Case Study #1: Danny's Diner](https://8weeksqlchallenge.com/case-study-1/)
+[# Case Study #1: Danny's Diner](https://8weeksqlchallenge.com/case-study-1/)
  
 <p align="center">
 <img src="https://8weeksqlchallenge.com/images/case-study-designs/1.png" alt="Image" width="450" height="450">
