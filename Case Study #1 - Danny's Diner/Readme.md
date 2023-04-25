@@ -60,9 +60,8 @@ GROUP BY s.customer_id;
 
 ### **Q2. How many days has each customer visited the restaurant?**
 ```
-SELECT 
-    customer_id,
-    COUNT(DISTINCT order_date) AS no_times_visited
+SELECT customer_id,
+       COUNT(DISTINCT order_date) AS no_times_visited
 FROM sales 
 GROUP BY customer_id;
 ```
@@ -73,10 +72,10 @@ each of those orders would be counted separately as a visit, leading to an infla
 ### **Q3. What was the first item from the menu purchased by each customer?**
 ```
 SELECT customer_id, 
-	   product_name  
+       product_name  
 FROM (SELECT s.customer_id, 
              m.product_name, 
-			 ROW_NUMBER() OVER(PARTITION BY s.customer_id ORDER BY s.order_date) AS rnk
+	     ROW_NUMBER() OVER(PARTITION BY s.customer_id ORDER BY s.order_date) AS rnk
 FROM sales s
 JOIN menu m ON m.product_id = s.product_id) AS t
 WHERE t.rnk=1;
@@ -145,7 +144,7 @@ WITH cte AS (
 )
 
 SELECT customer_id,
-	   product_name
+       product_name
 FROM cte
 WHERE rnk=1;
 ```
@@ -153,7 +152,7 @@ WHERE rnk=1;
 ### **Q8. What is the total items and amount spent for each member before they became a member?**
 ```
 SELECT s.customer_id,
-	   COUNT(m.product_name) AS number_of_item, 
+       COUNT(m.product_name) AS number_of_item, 
        SUM(m.price) AS total_amount
 FROM sales s
 JOIN members mb ON mb.customer_id = s.customer_id
@@ -211,11 +210,11 @@ SELECT s.customer_id,
        s.order_date,
        m.product_name,
        m.price,
-	      CASE
-		  WHEN mb.join_date > s.order_date THEN 'N'
-		  WHEN mb.join_date <= s.order_date THEN 'Y'
-                  ELSE 'N'
-	      END AS members
+       CASE
+           WHEN mb.join_date > s.order_date THEN 'N'
+           WHEN mb.join_date <= s.order_date THEN 'Y'
+           ELSE 'N'
+       END AS members
 FROM sales s
 LEFT JOIN members mb ON mb.customer_id = s.customer_id
 LEFT JOIN menu m ON s.product_id=m.product_id;
@@ -228,20 +227,20 @@ SELECT s.customer_id,
        s.order_date,
        m.product_name,
        m.price,
-	       CASE
-		   WHEN mb.join_date > s.order_date THEN 'N'
-		   WHEN mb.join_date <= s.order_date THEN 'Y'
-                   ELSE 'N'
-	       END AS members
+       CASE
+           WHEN mb.join_date > s.order_date THEN 'N'
+           WHEN mb.join_date <= s.order_date THEN 'Y'
+           ELSE 'N'
+       END AS members
 FROM sales s
 LEFT JOIN members mb ON mb.customer_id = s.customer_id
 LEFT JOIN menu m ON s.product_id=m.product_id)
 
 SELECT *,
-	 CASE 
-	      WHEN members = 'Y'
-	      THEN DENSE_RANK() OVER(PARTITION BY customer_id, members ORDER BY order_date) 
-	      ELSE null
-         END AS ranking 
+       CASE 
+	   WHEN members = 'Y'
+	   THEN DENSE_RANK() OVER(PARTITION BY customer_id, members ORDER BY order_date) 
+	   ELSE null
+       END AS ranking 
 FROM cte;
 ```
