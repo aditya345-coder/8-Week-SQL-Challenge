@@ -1,6 +1,7 @@
 # Danny's Ma 8-Week SQL Challenge
 
 This repository contains my code solutions for the challenges presented in Danny's Ma 8-Week SQL Challenge.
+
 All case study's requirements and resources are available on the challenge [website](https://8weeksqlchallenge.com/).
 
 ## Table of Contents
