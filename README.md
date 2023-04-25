@@ -5,10 +5,10 @@ This repository contains my code solutions for the challenges presented in Danny
 All case study's requirements and resources are available on the challenge [website](https://8weeksqlchallenge.com/).
 
 ## Table of Contents
-- Challenge Overview
-- Folder Structure
-- Getting Started
-- Resources
+- [Challenge Overview](#Challenge-Overview)
+- [Folder Structure](#Folder-Structure)
+- [Getting Started](#Getting-Started)
+- [Resources](#Resources)
 
 
 ## Challenge Overview
