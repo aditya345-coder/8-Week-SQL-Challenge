@@ -28,9 +28,9 @@ Use the SQL editor of your choice to write your code solutions. I used MySQL for
 ## Resources
 Here are some resources that may be helpful as you work through the challenges:
 
-- SQL Zoo (https://sqlzoo.net/)
-- W3Schools SQL Tutorial (https://www.w3schools.com/sql/)
-- SQLBolt (https://sqlbolt.com/)
+- [SQL Zoo](https://sqlzoo.net/)
+- [W3Schools SQL Tutorial](https://www.w3schools.com/sql/)
+- [SQLBolt](https://sqlbolt.com/)
 
 ## Support
 Give a ⭐️ if you like this project!
