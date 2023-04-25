@@ -17,6 +17,7 @@ The challenges cover a range of SQL topics and are designed to progressively inc
 ## Folder Structure
 - [Case Study #1](https://github.com/aditya345-coder/8-Week-SQL-Challenge_/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner) - Danny's Diner: Contains my code solutions for Week 1 challenge
 - [Case Study #2](https://github.com/aditya345-coder/8-Week-SQL-Challenge_/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner) - Pizza Runner: Contains my code solutions for Week 2 challenge
+<br>
 Each week's folder contains a README.md file with a brief summary of the challenge and my approach to solving it.
 
 ## Getting Started
