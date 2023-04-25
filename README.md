@@ -1,6 +1,7 @@
 # Danny's Ma 8-Week SQL Challenge
 
 This repository contains my code solutions for the challenges presented in Danny's Ma 8-Week SQL Challenge.
+All case study's requirements and resources are available on the challenge [website](https://8weeksqlchallenge.com/).
 
 ## Table of Contents
 - Challenge Overview
@@ -18,7 +19,7 @@ The challenges cover a range of SQL topics and are designed to progressively inc
 Each week's folder contains a README.md file with a brief summary of the challenge and my approach to solving it.
 
 ## Getting Started
-To get started, make sure that you have signed up for the challenge on Danny's website. Download the challenge files for each week and save them in their corresponding folders.
+To get started, make sure that you have signed up for the challenge on [Danny's website](https://8weeksqlchallenge.com/).
 
 Use the SQL editor of your choice to write your code solutions. I used MySQL for this challenge.
 
