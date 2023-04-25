@@ -34,3 +34,5 @@ Here are some resources that may be helpful as you work through the challenges:
 
 ## Support
 Give a ⭐️ if you like this project!
+
+<p>&copy; 2023 Aditya Gaharwar</p>
