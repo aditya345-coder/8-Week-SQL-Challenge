@@ -244,3 +244,4 @@ SELECT *,
        END AS ranking 
 FROM cte;
 ```
+<p>&copy; 2023 Aditya Gaharwar</p>
