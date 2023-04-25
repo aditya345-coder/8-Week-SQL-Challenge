@@ -49,17 +49,16 @@ Click [here](https://github.com/aditya345-coder/8-Week-SQL-Challenge_/blob/main/
 
 ##  Solutions
 
--- 1. What is the total amount each customer spent at the restaurant?
+### **Q1. What is the total amount each customer spent at the restaurant?**
 ```
-SELECT 
-	  s.customer_id, 
-    SUM(m.price) AS total_amount 
+SELECT s.customer_id, 
+       SUM(m.price) AS total_amount 
 FROM sales s
 JOIN menu m ON s.product_id=m.product_id
 GROUP BY s.customer_id;
 ```
 
--- 2. How many days has each customer visited the restaurant?
+### **Q2. How many days has each customer visited the restaurant?**
 ```
 SELECT 
     customer_id,
@@ -67,11 +66,11 @@ SELECT
 FROM sales 
 GROUP BY customer_id;
 ```
--- DISTINCT is used here, because if a customer visited the restaurant multiple times on the same day and placed multiple orders, 
--- each of those orders would be counted separately as a visit, leading to an inflated count.
+DISTINCT is used here, because if a customer visited the restaurant multiple times on the same day and placed multiple orders, 
+each of those orders would be counted separately as a visit, leading to an inflated count.
   
   
--- 3. What was the first item from the menu purchased by each customer?
+### **Q3. What was the first item from the menu purchased by each customer?**
 ```
 SELECT customer_id, 
 	   product_name  
@@ -83,7 +82,7 @@ JOIN menu m ON m.product_id = s.product_id) AS t
 WHERE t.rnk=1;
 ```
 
--- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+### **Q4. What is the most purchased item on the menu and how many times was it purchased by all customers?**
 ```
 SELECT m.product_name,
        COUNT(*) AS most_purchased
@@ -94,7 +93,7 @@ ORDER BY most_purchased DESC
 LIMIT 1;
 ```
 
--- 5. Which item was the most popular for each customer?
+### **Q5. Which item was the most popular for each customer?**
 ```
 WITH cte AS (SELECT s.customer_id, 
 		    m.product_name, 
@@ -111,7 +110,7 @@ FROM cte
 WHERE rnk=1;
 ```
 
--- 6. Which item was purchased first by the customer after they became a member?
+### **Q6. Which item was purchased first by the customer after they became a member?**
 ```
 WITH cte AS(
             SELECT s.customer_id,
@@ -131,7 +130,7 @@ FROM cte
 WHERE rnk=1;
 ```
 
--- 7. Which item was purchased just before the customer became a member? # ERROR
+### **Q7. Which item was purchased just before the customer became a member?**
 ```
 WITH cte AS (
 	SELECT s.customer_id,
@@ -151,7 +150,7 @@ FROM cte
 WHERE rnk=1;
 ```
 
--- 8. What is the total items and amount spent for each member before they became a member?
+### **Q8. What is the total items and amount spent for each member before they became a member?**
 ```
 SELECT s.customer_id,
 	   COUNT(m.product_name) AS number_of_item, 
@@ -164,7 +163,7 @@ GROUP BY s.customer_id
 ORDER BY s.customer_id;
 ```
 
--- 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
+### **Q9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?**
 ```
 WITH cte AS(
 	SELECT s.customer_id, 
@@ -181,7 +180,7 @@ SELECT customer_id, SUM(points) AS total_points FROM cte
 GROUP BY customer_id;
 ```
 
--- 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?  
+### **Q10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?**  
 ```
 WITH cte AS(
 	SELECT s.customer_id, 
@@ -204,9 +203,9 @@ WHERE EXTRACT(MONTH FROM order_date) = 1
 GROUP BY customer_id
 ORDER BY customer_id;
 ```
--- Bonus Questions
+## **Bonus Questions**
 
--- Join All The Things
+### **Join All The Things**
 ```
 SELECT s.customer_id,
        s.order_date,
@@ -222,7 +221,7 @@ LEFT JOIN members mb ON mb.customer_id = s.customer_id
 LEFT JOIN menu m ON s.product_id=m.product_id;
 ```
 						  
--- Rank All The Things
+### **Rank All The Things**
 ```						  
 WITH cte AS (
 SELECT s.customer_id,
