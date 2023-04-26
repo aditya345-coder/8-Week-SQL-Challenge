@@ -75,10 +75,12 @@ SELECT customer_id,
        product_name  
 FROM (SELECT s.customer_id, 
              m.product_name, 
-	     ROW_NUMBER() OVER(PARTITION BY s.customer_id ORDER BY s.order_date) AS rnk
+             s.order_date,
+             DENSE_RANK() OVER(PARTITION BY s.customer_id ORDER BY s.order_date) AS rnk
 FROM sales s
 JOIN menu m ON m.product_id = s.product_id) AS t
-WHERE t.rnk=1;
+WHERE t.rnk=1
+GROUP BY t.customer_id, t.product_name;
 ```
 
 ### **Q4. What is the most purchased item on the menu and how many times was it purchased by all customers?**
@@ -104,7 +106,7 @@ GROUP BY s.customer_id, m.product_id)
 
 SELECT customer_id, 
        product_name, 
-       count,rnk  
+       count
 FROM cte
 WHERE rnk=1;
 ```
