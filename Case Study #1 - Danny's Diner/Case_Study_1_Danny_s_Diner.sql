@@ -126,7 +126,7 @@ SELECT customer_id,
 FROM cte
 WHERE rnk=1;
 
--- 7. Which item was purchased just before the customer became a member? # ERROR
+-- 7. Which item was purchased just before the customer became a member?
 WITH cte AS (
 	SELECT s.customer_id,
 	       m.product_name, 
