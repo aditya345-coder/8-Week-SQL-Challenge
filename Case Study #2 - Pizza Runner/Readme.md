@@ -114,10 +114,24 @@ Before you start writing your SQL queries however - you might want to investigat
           </li>
 <li>If a Meat Lovers pizza was $12 and Vegetarian $10 fixed prices with no cost for extras and each runner is paid $0.30 per kilometre traveled - how much money does Pizza Runner have left over after these deliveries?</li>
 </details>
-    
 
+    
  <details>
           <summary><h3>E. Bonus Questions</h3></summary>
             If Danny wants to expand his range of pizzas - how would this impact the existing data design? Write an INSERT statement to demonstrate what would happen               if a new Supreme pizza with all the toppings was added to the Pizza Runner menu?  
     </details>
 </details>
+          
+<details>
+  <summary><h2>Solution</h2></summary>
+  
+  <details><summary><h3>A. Pizza Metrics</h3></summary></details>
+  
+  details><summary><h3>B. Runner and Customer Experience</h3></summary></details>
+          
+  details><summary><h3>C. Ingredient Optimisation<h3></summary></details>
+     
+  details><summary><h3>D. Pricing and Ratings</h3></summary></details>
+  
+  details><summary><h3>E. Bonus Questions</h3></summary></details>
+          </details>
