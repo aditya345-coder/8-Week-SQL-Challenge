@@ -41,7 +41,7 @@ Again, there are many questions in this case study - please feel free to pick an
 
 Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!
 
-+ <details>
+  + <details>
     <summary>A. Pizza Metrics</summary>  
   
     1. How many pizzas were ordered?
