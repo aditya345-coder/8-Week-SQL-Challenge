@@ -27,7 +27,7 @@ All datasets exist within the pizza_runner database schema - be sure to include 
 <img src="https://user-images.githubusercontent.com/92220550/234104650-53ff5a5e-1689-4be8-b044-5e69f7c5ecb9.PNG" alt="Image" width="450" height="350">
 
 <details>
-<summary>Case Study Questions</summary>
+  <summary><h2>Case Study Questions</h2></summary>
 This case study has LOTS of questions - they are broken up by area of focus including:
 
 - Pizza Metrics
@@ -42,43 +42,58 @@ Again, there are many questions in this case study - please feel free to pick an
 Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!
 
   + <details>
-    <summary>A. Pizza Metrics</summary>  
-  
-    1. How many pizzas were ordered?
-    2. How many unique customer orders were made?
-    3. How many successful orders were delivered by each runner?
-    4. How many of each type of pizza was delivered?
-    5. How many Vegetarian and Meatlovers were ordered by each customer?
-    6. What was the maximum number of pizzas delivered in a single order?
-    7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
-    8. How many pizzas were delivered that had both exclusions and extras?
-    9. What was the total volume of pizzas ordered for each hour of the day?
-    10. What was the volume of orders for each day of the week?
-  
+    <summary><h3>A. Pizza Metrics</h3></summary>  
+    <ol>
+      <li>How many pizzas were ordered?</li>
+      <li>How many unique customer orders were made?</li>
+      <li>How many successful orders were delivered by each runner?</li>
+      <li>How many of each type of pizza was delivered?</li>
+      <li>How many Vegetarian and Meatlovers were ordered by each customer?</li>
+      <li>What was the maximum number of pizzas delivered in a single order?</li>
+      <li>For each customer, how many delivered pizzas had at least 1 change and how many had no changes?</li>
+      <li>How many pizzas were delivered that had both exclusions and extras?</li>
+      <li>What was the total volume of pizzas ordered for each hour of the day?</li>
+      <li>What was the volume of orders for each day of the week?</li>
+    </ol>
   </details>  
-</details>    
   
-### B. Runner and Customer Experience
-1. How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)
-2. What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?
-3. Is there any relationship between the number of pizzas and how long the order takes to prepare?
-4. What was the average distance travelled for each customer?
-5. What was the difference between the longest and shortest delivery times for all orders?
-6. What was the average speed for each runner for each delivery and do you notice any trend for these values?
-7. What is the successful delivery percentage for each runner?
+  + <details>
+  <summary><h3>B. Runner and Customer Experience</h3>
+    <ol>
+      <li>How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)</li>
+      <li>What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?</li>
+      <li>Is there any relationship between the number of pizzas and how long the order takes to prepare?</li>
+      <li>What was the average distance travelled for each customer?</li>
+      <li>What was the difference between the longest and shortest delivery times for all orders?</li>
+      <li>What was the average speed for each runner for each delivery and do you notice any trend for these values?</li>
+      <li>What is the successful delivery percentage for each runner?</li>
+    </ol>
+  </details>    
 
-### C. Ingredient Optimisation
-1. What are the standard ingredients for each pizza?
-2. What was the most commonly added extra?
-3. What was the most common exclusion?
-4. Generate an order item for each record in the customers_orders table in the format of one of the following:
-- Meat Lovers
-- Meat Lovers - Exclude Beef
-- Meat Lovers - Extra Bacon
-- Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
-5. Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients
-- For example: "Meat Lovers: 2xBacon, Beef, ... , Salami"
-6. What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?
+    + <details>
+        <summary><h3>C. Ingredient Optimisation<h3></summary>
+        <ol>
+          <li>What are the standard ingredients for each pizza?</li>
+          <li>What was the most commonly added extra?</li>
+          <li>What was the most common exclusion?</li>
+          <li>Generate an order item for each record in the customers_orders table in the format of one of the following:
+            <ul>
+              <li>Meat Lovers
+              <li>Meat Lovers - Exclude Beef
+              <li>Meat Lovers - Extra Bacon
+              <li>Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
+            </ul></li>
+            <li>Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients
+              <ul><li>For example: "Meat Lovers: 2xBacon, Beef, ... , Salami"</li></ul></li>
+<li>What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?</li>
+        </ol> 
+      </details>   
+      
+      
+    + <details>
+        <summary><h3>C. Ingredient Optimisation<h3></summary>
+        <ol>
+
   
 ### D. Pricing and Ratings
 1. If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - how much money has Pizza Runner made so far if there are no delivery fees?
