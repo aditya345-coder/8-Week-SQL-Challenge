@@ -26,7 +26,7 @@ All datasets exist within the pizza_runner database schema - be sure to include 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/92220550/234104650-53ff5a5e-1689-4be8-b044-5e69f7c5ecb9.PNG" alt="Image" width="450" height="350">
 
-## <Case Study Questions> 
+<Case Study Questions> 
 This case study has LOTS of questions - they are broken up by area of focus including:
 
 - Pizza Metrics
