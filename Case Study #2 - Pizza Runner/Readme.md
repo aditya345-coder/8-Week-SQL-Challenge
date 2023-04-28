@@ -58,7 +58,7 @@ Before you start writing your SQL queries however - you might want to investigat
   </details>  
   
   <details>
-  <summary><h3>B. Runner and Customer Experience</h3>
+  <summary><h3>B. Runner and Customer Experience</h3></summary>
     <ol>
       <li>How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)</li>
       <li>What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?</li>
@@ -77,12 +77,11 @@ Before you start writing your SQL queries however - you might want to investigat
           <li>What was the most commonly added extra?</li>
           <li>What was the most common exclusion?</li>
           <li>Generate an order item for each record in the customers_orders table in the format of one of the following:
-            <ul>
-              <li>Meat Lovers
-              <li>Meat Lovers - Exclude Beef
-              <li>Meat Lovers - Extra Bacon
-              <li>Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
-            </ul></li>
+              - Meat Lovers
+              - Meat Lovers - Exclude Beef
+              - Meat Lovers - Extra Bacon
+              - Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
+            </li>
             <li>Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients
               <ul><li>For example: "Meat Lovers: 2xBacon, Beef, ... , Salami"</li></ul></li>
 <li>What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?</li>
