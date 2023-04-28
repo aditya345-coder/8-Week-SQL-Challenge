@@ -40,9 +40,10 @@ Each of the following case study questions can be answered using a single SQL st
 Again, there are many questions in this case study - please feel free to pick and choose which ones you’d like to try!
 
 Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!
-</details>
-  
-### A. Pizza Metrics
+
++ <details>
+    <summary>A. Pizza Metrics</summary>  
+### 
 1. How many pizzas were ordered?
 2. How many unique customer orders were made?
 3. How many successful orders were delivered by each runner?
@@ -53,7 +54,8 @@ Before you start writing your SQL queries however - you might want to investigat
 8. How many pizzas were delivered that had both exclusions and extras?
 9. What was the total volume of pizzas ordered for each hour of the day?
 10. What was the volume of orders for each day of the week?
-  
+</details>  
+</details>    
 ### B. Runner and Customer Experience
 1. How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)
 2. What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?
