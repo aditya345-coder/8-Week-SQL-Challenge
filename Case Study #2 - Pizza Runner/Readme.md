@@ -123,15 +123,30 @@ Before you start writing your SQL queries however - you might want to investigat
 </details>
           
 <details>
-  <summary><h2>Solution</h2></summary>
+     <summary><h2>Solution</h2></summary>
   
-  <details><summary><h3>A. Pizza Metrics</h3></summary></details>
-  
-  details><summary><h3>B. Runner and Customer Experience</h3></summary></details>
+      <details>
+        <summary><h3>A. Pizza Metrics</h3></summary>
+      
+      </details>
+
+      <details>
+        <summary><h3>B. Runner and Customer Experience</h3></summary>
           
-  details><summary><h3>C. Ingredient Optimisation<h3></summary></details>
-     
-  details><summary><h3>D. Pricing and Ratings</h3></summary></details>
-  
-  details><summary><h3>E. Bonus Questions</h3></summary></details>
-          </details>
+       </details>
+
+      <details>
+          <summary><h3>C. Ingredient Optimisation<h3></summary>
+            
+      </details>
+
+      <details>
+        <summary><h3>D. Pricing and Ratings</h3></summary>
+       
+      </details>
+
+      <details>
+        <summary><h3>E. Bonus Questions</h3></summary>
+      
+      </details>
+</details>
