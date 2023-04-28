@@ -151,5 +151,4 @@ Before you start writing your SQL queries however - you might want to investigat
         <summary><h3>E. Bonus Questions</h3></summary>
       
       </details>
-            
 </details>
