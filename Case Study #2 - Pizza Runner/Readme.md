@@ -41,7 +41,7 @@ Again, there are many questions in this case study - please feel free to pick an
 
 Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!
 
-  + <details>
+ <details>
     <summary><h3>A. Pizza Metrics</h3></summary>  
     <ol>
       <li>How many pizzas were ordered?</li>
@@ -57,7 +57,7 @@ Before you start writing your SQL queries however - you might want to investigat
     </ol>
   </details>  
   
-  + <details>
+  <details>
   <summary><h3>B. Runner and Customer Experience</h3>
     <ol>
       <li>How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)</li>
@@ -70,7 +70,7 @@ Before you start writing your SQL queries however - you might want to investigat
     </ol>
   </details>    
 
-    + <details>
+   <details>
         <summary><h3>C. Ingredient Optimisation<h3></summary>
         <ol>
           <li>What are the standard ingredients for each pizza?</li>
@@ -88,11 +88,7 @@ Before you start writing your SQL queries however - you might want to investigat
 <li>What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?</li>
         </ol> 
       </details>   
-      
-      
-    + <details>
-        <summary><h3>C. Ingredient Optimisation<h3></summary>
-        <ol>
+              
 
   
 ### D. Pricing and Ratings
