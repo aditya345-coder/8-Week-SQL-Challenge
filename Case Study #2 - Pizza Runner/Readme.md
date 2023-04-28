@@ -25,8 +25,8 @@ All datasets exist within the pizza_runner database schema - be sure to include 
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/92220550/234104650-53ff5a5e-1689-4be8-b044-5e69f7c5ecb9.PNG" alt="Image" width="450" height="350">
-<details>
-## Case Study Questions
+
+## <Case Study Questions> 
 This case study has LOTS of questions - they are broken up by area of focus including:
 
 - Pizza Metrics
@@ -39,8 +39,9 @@ Each of the following case study questions can be answered using a single SQL st
 Again, there are many questions in this case study - please feel free to pick and choose which ones you’d like to try!
 
 Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!
-
-### A. Pizza Metrics
+</Case Study Questions> 
+  
+### A. Pizza Metrics>
 1. How many pizzas were ordered?
 2. How many unique customer orders were made?
 3. How many successful orders were delivered by each runner?
