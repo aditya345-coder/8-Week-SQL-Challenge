@@ -123,6 +123,7 @@ Before you start writing your SQL queries however - you might want to investigat
 </details>
 
 <hr>
+          
 <details>
      <summary><h2>Solution</h2></summary>
   
