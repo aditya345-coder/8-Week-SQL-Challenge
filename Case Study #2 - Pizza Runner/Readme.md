@@ -25,7 +25,7 @@ All datasets exist within the pizza_runner database schema - be sure to include 
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/92220550/234104650-53ff5a5e-1689-4be8-b044-5e69f7c5ecb9.PNG" alt="Image" width="450" height="350">
-<summary>
+<details>
 ## Case Study Questions
 This case study has LOTS of questions - they are broken up by area of focus including:
 
@@ -94,4 +94,4 @@ Before you start writing your SQL queries however - you might want to investigat
   
 ### E. Bonus Questions
 If Danny wants to expand his range of pizzas - how would this impact the existing data design? Write an INSERT statement to demonstrate what would happen if a new Supreme pizza with all the toppings was added to the Pizza Runner menu?  
-</summary>
+</details>
