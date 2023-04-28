@@ -40,7 +40,7 @@ Each of the following case study questions can be answered using a single SQL st
 Again, there are many questions in this case study - please feel free to pick and choose which ones you’d like to try!
 
 Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!
-<hr>
+
  <details>
     <summary><h3>A. Pizza Metrics</h3></summary>  
     <ol>
@@ -56,7 +56,7 @@ Before you start writing your SQL queries however - you might want to investigat
       <li>What was the volume of orders for each day of the week?</li>
     </ol>
   </details>  
-<hr>
+
   <details>
   <summary><h3>B. Runner and Customer Experience</h3></summary>
     <ol>
@@ -69,7 +69,7 @@ Before you start writing your SQL queries however - you might want to investigat
       <li>What is the successful delivery percentage for each runner?</li>
     </ol>
   </details>    
-<hr>
+
    <details>
         <summary><h3>C. Ingredient Optimisation<h3></summary>
         <ol>
@@ -89,13 +89,13 @@ Before you start writing your SQL queries however - you might want to investigat
 <li>What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?</li>
         </ol> 
       </details>   
-<hr>
+
           <details>
             <summary><h3>D. Pricing and Ratings</h3></summary>
             <ol>
               <li>If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - how much money has Pizza Runner made so far if there are no delivery fees?</li>
-              <li<What if there was an additional $1 charge for any pizza extras?</li>
-          <ul><i>Add cheese is $1 extra</li></ul>
+              <li<What if there was an additional $1 charge for any pizza extras?
+          <ul><i>Add cheese is $1 extra</li></ul></li>
             <li>The Pizza Runner team now wants to add an additional ratings system that allows customers to rate their runner, how would you design an additional table for this new dataset - generate a schema for this new table and insert your own data for ratings for each successful customer order between 1 to 5.</li>
           <li>Using your newly generated table - can you join all of the information together to form a table which has the following information for successful deliveries?
             <ul>
@@ -113,7 +113,7 @@ Before you start writing your SQL queries however - you might want to investigat
           </li>
 <li>If a Meat Lovers pizza was $12 and Vegetarian $10 fixed prices with no cost for extras and each runner is paid $0.30 per kilometre traveled - how much money does Pizza Runner have left over after these deliveries?</li>
           </details>
-<hr>
+
           <details>
             <summary><h3>E. Bonus Questions</h3></summary>
 If Danny wants to expand his range of pizzas - how would this impact the existing data design? Write an INSERT statement to demonstrate what would happen if a new Supreme pizza with all the toppings was added to the Pizza Runner menu?  
