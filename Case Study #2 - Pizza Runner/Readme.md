@@ -40,7 +40,7 @@ Each of the following case study questions can be answered using a single SQL st
 Again, there are many questions in this case study - please feel free to pick and choose which ones you’d like to try!
 
 Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!
----
+<hr>
  <details>
     <summary><h3>A. Pizza Metrics</h3></summary>  
     <ol>
@@ -56,7 +56,7 @@ Before you start writing your SQL queries however - you might want to investigat
       <li>What was the volume of orders for each day of the week?</li>
     </ol>
   </details>  
----
+<hr>
   <details>
   <summary><h3>B. Runner and Customer Experience</h3></summary>
     <ol>
@@ -69,7 +69,7 @@ Before you start writing your SQL queries however - you might want to investigat
       <li>What is the successful delivery percentage for each runner?</li>
     </ol>
   </details>    
----
+<hr>
    <details>
         <summary><h3>C. Ingredient Optimisation<h3></summary>
         <ol>
@@ -89,7 +89,7 @@ Before you start writing your SQL queries however - you might want to investigat
 <li>What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?</li>
         </ol> 
       </details>   
----
+<hr>
           <details>
             <summary><h3>D. Pricing and Ratings</h3></summary>
             <ol>
@@ -113,7 +113,7 @@ Before you start writing your SQL queries however - you might want to investigat
           </li>
 <li>If a Meat Lovers pizza was $12 and Vegetarian $10 fixed prices with no cost for extras and each runner is paid $0.30 per kilometre traveled - how much money does Pizza Runner have left over after these deliveries?</li>
           </details>
----
+<hr>
           <details>
             <summary><h3>E. Bonus Questions</h3></summary>
 If Danny wants to expand his range of pizzas - how would this impact the existing data design? Write an INSERT statement to demonstrate what would happen if a new Supreme pizza with all the toppings was added to the Pizza Runner menu?  
